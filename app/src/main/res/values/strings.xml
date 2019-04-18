@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PantauPadi</string>
+    <string name="title_activity_color_blob_detector2">colorBlobDetector2</string>
 </resources>
