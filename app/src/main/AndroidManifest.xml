@@ -28,14 +28,15 @@
         android:supportsRtl="true"
         android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 
-        <activity android:name=".User.Login">
+        <activity android:name=".User.Login"
+            android:theme="@style/AppCombat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".User.SignUp" />
+        <activity android:name=".User.SignUp" android:theme="@style/AppCombat" />
         <activity android:name=".MainActivity" />
     </application>
 

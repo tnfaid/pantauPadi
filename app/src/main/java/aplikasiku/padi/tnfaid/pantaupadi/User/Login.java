@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity {
 
     ProgressDialog pDialog;
     Button btn_register, btn_login;
-    EditText txt_username, txt_password;
+    EditText txt_email, txt_password;
     Intent intent;
 
     int success;
@@ -46,14 +46,14 @@ public class Login extends AppCompatActivity {
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
 
-    public final static String TAG_USERNAME = "username";
+    public final static String TAG_EMAIL = "email";
     public final static String TAG_ID = "id";
 
     String tag_json_obj = "json_obj_req";
 
     SharedPreferences sharedpreferences;
     Boolean session = false;
-    String id, username;
+    String id, email;
     public static final String my_shared_preferences = "my_shared_preferences";
     public static final String session_status = "session_status";
 
@@ -75,19 +75,19 @@ public class Login extends AppCompatActivity {
 
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_register = (Button) findViewById(R.id.btn_register);
-        txt_username = (EditText) findViewById(R.id.txt_username);
+        txt_email = (EditText) findViewById(R.id.txt_email);
         txt_password = (EditText) findViewById(R.id.txt_password);
 
         // Cek session login jika TRUE maka langsung buka MainActivity
         sharedpreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
         session = sharedpreferences.getBoolean(session_status, false);
         id = sharedpreferences.getString(TAG_ID, null);
-        username = sharedpreferences.getString(TAG_USERNAME, null);
+        email = sharedpreferences.getString(TAG_EMAIL, null);
 
         if (session) {
             Intent intent = new Intent(Login.this, MainActivity.class);
             intent.putExtra(TAG_ID, id);
-            intent.putExtra(TAG_USERNAME, username);
+            intent.putExtra(TAG_EMAIL, email);
             finish();
             startActivity(intent);
         }
@@ -98,15 +98,15 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                String username = txt_username.getText().toString();
+                String eamil = txt_email.getText().toString();
                 String password = txt_password.getText().toString();
 
                 // mengecek kolom yang kosong
-                if (username.trim().length() > 0 && password.trim().length() > 0) {
+                if (email.trim().length() > 0 && password.trim().length() > 0) {
                     if (conMgr.getActiveNetworkInfo() != null
                             && conMgr.getActiveNetworkInfo().isAvailable()
                             && conMgr.getActiveNetworkInfo().isConnected()) {
-                        checkLogin(username, password);
+                        checkLogin(email, password);
                     } else {
                         Toast.makeText(getApplicationContext() ,"No Internet Connection", Toast.LENGTH_LONG).show();
                     }
@@ -130,7 +130,7 @@ public class Login extends AppCompatActivity {
 
     }
 
-    private void checkLogin(final String username, final String password) {
+    private void checkLogin(final String email, final String password) {
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
         pDialog.setMessage("Logging in ...");
@@ -149,7 +149,7 @@ public class Login extends AppCompatActivity {
 
                     // Check for error node in json
                     if (success == 1) {
-                        String username = jObj.getString(TAG_USERNAME);
+                        String email = jObj.getString(TAG_EMAIL);
                         String id = jObj.getString(TAG_ID);
 
                         Log.e("Successfully Login!", jObj.toString());
@@ -160,13 +160,13 @@ public class Login extends AppCompatActivity {
                         SharedPreferences.Editor editor = sharedpreferences.edit();
                         editor.putBoolean(session_status, true);
                         editor.putString(TAG_ID, id);
-                        editor.putString(TAG_USERNAME, username);
+                        editor.putString(TAG_EMAIL, email);
                         editor.commit();
 
                         // Memanggil main activity
                         Intent intent = new Intent(Login.this, MainActivity.class);
                         intent.putExtra(TAG_ID, id);
-                        intent.putExtra(TAG_USERNAME, username);
+                        intent.putExtra(TAG_EMAIL, email);
                         finish();
                         startActivity(intent);
                     } else {
@@ -197,7 +197,7 @@ public class Login extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting parameters to login url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("username", username);
+                params.put("email", email);
                 params.put("password", password);
 
                 return params;
