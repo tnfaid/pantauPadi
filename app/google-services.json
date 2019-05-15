@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "543697515037",
+    "firebase_url": "https://pantaupadi.firebaseio.com",
+    "project_id": "pantaupadi",
+    "storage_bucket": "pantaupadi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:543697515037:android:e11d85ce4a69f8ae",
+        "android_client_info": {
+          "package_name": "aplikasiku.padi.tnfaid.pantaupadi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "543697515037-9nrchhun4qbpb2gjenui3d2g6tuvu0up.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "aplikasiku.padi.tnfaid.pantaupadi",
+            "certificate_hash": "882d389a636442154cecb68a5eecfcdd7a14ad40"
+          }
+        },
+        {
+          "client_id": "543697515037-4henbee4nl8mlsdva4p652lhh5bgromq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyV5VVzmH79NIYTlRvqmyP9P7Z71TerC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "543697515037-4henbee4nl8mlsdva4p652lhh5bgromq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

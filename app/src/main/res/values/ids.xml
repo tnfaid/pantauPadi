@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="click" type="id">@+id/click</item>
+    <item name="img1" type="id">@+id/img1</item>
+    <item name="img2" type="id">@+id/img2</item>
+    <item name="img3" type="id">@+id/img3</item>
+</resources>

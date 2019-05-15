@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias '12345'
+            keyPassword 'qwerty'
+            storeFile file('C:/Users/tnfaid/Desktop/c.py')
+            storePassword 'angkahuruf'
+        }
+    }
     compileSdkVersion 28
     defaultConfig {
         applicationId "aplikasiku.padi.tnfaid.pantaupadi"
@@ -9,15 +17,21 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi"
+        }
+        signingConfig signingConfigs.config
     }
     buildTypes {
         release {
-            minifyEnabled false
+            debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jniLibs/'] } }
     buildToolsVersion '28.0.3'
+    productFlavors {
+    }
 }
 
 dependencies {
@@ -31,4 +45,5 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation project(':openCVLibrary345_1')
+    implementation 'com.android.volley:volley:1.1.0'
 }
