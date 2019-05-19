@@ -98,7 +98,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                String eamil = txt_email.getText().toString();
+                String email = txt_email.getText().toString();
                 String password = txt_password.getText().toString();
 
                 // mengecek kolom yang kosong
