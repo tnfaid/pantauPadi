@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ambil_gambar"
+        android:title="@string/ambil_gambar"
+        android:icon="@drawable/ic_photo_camera_black_24dp"
+        />
+
+    <item
+        android:id="@+id/tambah_info"
+        android:title="@string/tambah_info"
+        android:icon="@drawable/ic_add_black_24dp"
+        />
+
+    <item
+        android:id="@+id/profil"
+        android:title="@string/profil"
+        android:icon="@drawable/ic_person_black_24dp"
+        />
+
+    <item
+        android:id="@+id/tentang"
+        android:title="@string/tentang"
+        android:icon="@drawable/ic_info_black_24dp"
+        />
+
+    <item
+        android:id="@+id/keluar"
+        android:title="@string/keluar"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        />
+</menu>
