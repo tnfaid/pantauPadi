@@ -4,5 +4,5 @@
       android:versionCode="3450"
       android:versionName="3.4.5">
 
-    <uses-sdk android:targetSdkVersion="21" />
+
 </manifest>
