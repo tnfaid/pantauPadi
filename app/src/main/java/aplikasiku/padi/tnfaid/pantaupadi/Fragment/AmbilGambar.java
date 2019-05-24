@@ -38,8 +38,7 @@ import aplikasiku.padi.tnfaid.pantaupadi.User.Login;
 public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCameraViewListener2,View.OnTouchListener {
     private static final String TAG = "CameraBlobActivity";
 
-    Button btn_logout;
-    SharedPreferences sharedpreferences;
+
 
     private boolean mIsColorSelected = false;
     private Mat mRgba;
@@ -91,27 +90,6 @@ public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCame
         mOpenCvCameraView = (CameraBridgeViewBase) view.findViewById(R.id.color_blob_detection_activity_surface_view);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
-
-
-
-        btn_logout = (Button) view.findViewById(R.id.btn_logout);
-
-        sharedpreferences = this.getActivity().getSharedPreferences(Login.my_shared_preferences, Context.MODE_PRIVATE);
-
-        btn_logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                // update login session ke FALSE dan mengosongkan nilai id dan username
-                SharedPreferences.Editor editor = sharedpreferences.edit();
-                editor.putBoolean(Login.session_status, false);
-                editor.commit();
-
-                Intent intent = new Intent(getContext(), Login.class);
-                getActivity().finish();
-                startActivity(intent);
-            }
-        });
 
         return view;
     }

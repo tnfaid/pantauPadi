@@ -31,13 +31,6 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             />
 
-        <Button
-            android:id="@+id/btn_logout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Logout"
-            tools:layout_editor_absoluteX="160dp"
-            tools:layout_editor_absoluteY="569dp" />
     </LinearLayout>
 
     <android.support.design.widget.BottomNavigationView
