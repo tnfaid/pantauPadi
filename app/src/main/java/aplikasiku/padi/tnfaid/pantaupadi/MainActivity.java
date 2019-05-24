@@ -1,24 +1,6 @@
 package aplikasiku.padi.tnfaid.pantaupadi;
 
 
-import java.util.List;
-
-import org.opencv.android.BaseLoaderCallback;
-import org.opencv.android.CameraBridgeViewBase.CvCameraViewFrame;
-import org.opencv.android.LoaderCallbackInterface;
-import org.opencv.android.OpenCVLoader;
-import org.opencv.core.Core;
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
-import org.opencv.core.MatOfPoint;
-import org.opencv.core.Rect;
-import org.opencv.core.Scalar;
-import org.opencv.core.Size;
-import org.opencv.android.CameraBridgeViewBase;
-import org.opencv.android.CameraBridgeViewBase.CvCameraViewListener2;
-import org.opencv.imgproc.Imgproc;
-
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -29,16 +11,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
-import android.view.View.OnTouchListener;
-import android.view.SurfaceView;
 import android.widget.Button;
 
-import aplikasiku.padi.tnfaid.pantaupadi.Fragment.ambilGambar;
-import aplikasiku.padi.tnfaid.pantaupadi.Fragment.keluar;
+import aplikasiku.padi.tnfaid.pantaupadi.Fragment.AmbilGambar;
+import aplikasiku.padi.tnfaid.pantaupadi.Fragment.Keluar;
 import aplikasiku.padi.tnfaid.pantaupadi.Fragment.profil;
 import aplikasiku.padi.tnfaid.pantaupadi.Fragment.tambahInfo;
 import aplikasiku.padi.tnfaid.pantaupadi.Fragment.tentang;
@@ -80,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 //        fragment penempatan yang pertam muncul
-        getFragmentPage(new ambilGambar());
+        getFragmentPage(new AmbilGambar());
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -92,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 //                menentukan halaman fragment yang akan tampil
                 switch (menuItem.getItemId()){
                     case R.id.ambil_gambar:
-                        fragment = new ambilGambar();
+                        fragment = new AmbilGambar();
                         break;
                     case R.id.tambah_info:
                         fragment = new tambahInfo();
@@ -104,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new tentang();
                         break;
                     case R.id.keluar:
-                        fragment = new keluar();
+                        fragment = new Keluar();
                         break;
                 }
                 return getFragmentPage(fragment);

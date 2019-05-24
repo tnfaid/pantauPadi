@@ -39,7 +39,12 @@
         <activity
             android:name=".User.SignUp"
             android:theme="@style/AppCombat" />
-        <activity android:name=".MainActivity"  android:theme="@style/AppCombat"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppCombat" />
+        <activity
+            android:name=".Model.ModelDaun"
+            android:label="@string/title_activity_model_daun"></activity>
     </application>
 
 </manifest>

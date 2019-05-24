@@ -1,4 +1,4 @@
-package aplikasiku.padi.tnfaid.pantaupadi;
+package aplikasiku.padi.tnfaid.pantaupadi.Activity;
 
 import java.util.ArrayList;
 import java.util.Iterator;

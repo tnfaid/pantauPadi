@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import aplikasiku.padi.tnfaid.pantaupadi.R;
 
 
-public class keluar extends Fragment {
+public class Keluar extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_keluar, container,false);
