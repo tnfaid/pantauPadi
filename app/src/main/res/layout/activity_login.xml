@@ -15,7 +15,7 @@
         app:layout_constraintGuide_begin="24dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline_right"
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -29,7 +29,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:src="@drawable/logo_pantaupadi"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
         android:textSize="8pt"
         android:textStyle="bold"
         android:textColor="@color/fresh"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/icon" />
@@ -59,7 +59,7 @@
         android:singleLine="true"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -77,7 +77,7 @@
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:drawableRight="@drawable/ic_remove_red_eye_black_24dp"
-        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/txt_email" />
 
@@ -88,7 +88,10 @@
         android:layout_marginTop="8dp"
         android:text="Remember me?"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        android:shadowColor="@color/white"
+        android:outlineSpotShadowColor="@color/white"
+        android:outlineAmbientShadowColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/txt_password" />
@@ -101,20 +104,20 @@
         android:background="@drawable/bg_btn"
         android:text="Login"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/saveLoginCheckBox" />
 
     <Button
-        android:id="@+id/btn_register"
+        android:id="@+id/btn_sign_up"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@drawable/bg_et"
-        android:text="Register"
+        android:background="@drawable/bg_btn_bold"
+        android:text="Sign Up"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />

@@ -24,14 +24,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import aplikasiku.padi.tnfaid.pantaupadi.R;
-import aplikasiku.padi.tnfaid.pantaupadi.app.AppController;
 import aplikasiku.padi.tnfaid.pantaupadi.app.MySingleton;
 import aplikasiku.padi.tnfaid.pantaupadi.util.Server;
 
 public class SignUp extends AppCompatActivity {
 
     ProgressDialog pDialog;
-    Button btn_register, btn_login;
+    Button btn_sign_up, btn_login;
     EditText txt_firstName, txt_lastName, txt_email, txt_mobile, txt_country, txt_password, txt_confirm_password;
     Intent intent;
 
@@ -64,7 +63,7 @@ public class SignUp extends AppCompatActivity {
         }
 
         btn_login = (Button) findViewById(R.id.btn_login);
-        btn_register = (Button) findViewById(R.id.btn_register);
+        btn_sign_up = (Button) findViewById(R.id.btn_sign_up);
         txt_firstName = (EditText) findViewById(R.id.txt_firstName);
         txt_lastName = (EditText) findViewById(R.id.txt_lastName);
         txt_email = (EditText) findViewById(R.id.txt_email);
@@ -84,7 +83,7 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-        btn_register.setOnClickListener(new View.OnClickListener() {
+        btn_sign_up.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {

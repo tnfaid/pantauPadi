@@ -38,7 +38,7 @@
         </activity>
         <activity
             android:name=".User.SignUp"
-            android:theme="@style/AppCombat" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppCombat" />
