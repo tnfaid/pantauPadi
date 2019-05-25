@@ -57,6 +57,7 @@
         android:inputType="textEmailAddress"
         android:padding="16dp"
         android:singleLine="true"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintHorizontal_bias="0.0"
@@ -73,30 +74,44 @@
         android:singleLine="true"
         android:background="@drawable/bg_et"
         android:padding="16dp"
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:drawableRight="@drawable/ic_remove_red_eye_black_24dp"
         app:layout_constraintEnd_toStartOf="@id/guideline_right"
         app:layout_constraintStart_toStartOf="@id/guideline_left"
         app:layout_constraintTop_toBottomOf="@+id/txt_email" />
 
+    <CheckBox
+        android:id="@+id/saveLoginCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Remember me?"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/bg_btn"
         android:text="Login"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline_left"
-        app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+        app:layout_constraintTop_toBottomOf="@+id/saveLoginCheckBox" />
 
     <Button
         android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:background="@drawable/bg_btn"
+        android:background="@drawable/bg_et"
         android:text="Register"
         android:textColor="@color/white"
         app:layout_constraintEnd_toStartOf="@+id/guideline_right"
