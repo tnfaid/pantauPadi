@@ -4,7 +4,7 @@
     <style name="AppTheme" xmlns:custom="http://schemas.android.com/apk/res-auto" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/cleanOpacity</item>
+        <item name="colorPrimaryDark">@color/colorFeather</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

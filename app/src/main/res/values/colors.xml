@@ -5,6 +5,7 @@
     <color name="colorPrimaryDark">#668653</color>
     <color name="colorAccent">#F7eF6A</color>
     <color name="colorFeather">#77c9d4</color>
+    <color name="cleanDark">#b9b6bc</color>
     <color name="clean">#DFDCE3</color>
     <color name="cleanOpacity">#97dfdce3</color>
     <color name="fresh">#F7eF6A</color>
