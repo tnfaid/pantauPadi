@@ -85,8 +85,8 @@
             android:padding="16dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/txt_firstName" />
 
         <EditText
@@ -106,56 +106,56 @@
             app:layout_constraintEnd_toEndOf="@+id/guideline_right"
             app:layout_constraintTop_toBottomOf="@+id/txt_lastName" />
 
+        <!--<EditText-->
+            <!--android:id="@+id/txt_mobile"-->
+            <!--android:layout_width="328dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:background="@drawable/bg_et"-->
+            <!--android:hint="Mobile"-->
+            <!--android:inputType="number"-->
+            <!--android:padding="16dp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textColorHint="@color/white"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/guideline_right"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/guideline_left"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/txt_email" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/txt_country"-->
+            <!--android:layout_width="328dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:background="@drawable/bg_et"-->
+            <!--android:hint="Country"-->
+            <!--android:inputType="number"-->
+            <!--android:padding="16dp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textColorHint="@color/white"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/guideline_left"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/guideline_right"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/txt_mobile" />-->
+
         <EditText
-            android:id="@+id/txt_mobile"
+            android:id="@+id/txt_password"
             android:layout_width="328dp"
-            android:layout_height="wrap_content"
+            android:layout_height="64dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:background="@drawable/bg_et"
-            android:hint="Mobile"
-            android:inputType="number"
+            android:hint="Password"
+            android:inputType="textPassword"
             android:padding="16dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/txt_email" />
-
-        <EditText
-            android:id="@+id/txt_country"
-            android:layout_width="328dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/bg_et"
-            android:hint="Country"
-            android:inputType="number"
-            android:padding="16dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline_left"
-            app:layout_constraintEnd_toEndOf="@+id/guideline_right"
-            app:layout_constraintTop_toBottomOf="@+id/txt_mobile" />
-
-        <EditText
-        android:id="@+id/txt_password"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/bg_et"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline_left"
-            app:layout_constraintEnd_toEndOf="@+id/guideline_right"
-        app:layout_constraintTop_toBottomOf="@+id/txt_country" />
 
         <EditText
             android:id="@+id/txt_confirm_password"
@@ -170,21 +170,23 @@
             android:padding="16dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
-            app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+            app:layout_constraintStart_toStartOf="@+id/guideline_left"
             app:layout_constraintTop_toBottomOf="@+id/txt_password" />
 
         <Button
             android:id="@+id/btn_sign_up"
             android:layout_width="328dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/bg_btn_bold"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_btn_bold"
             android:text="Sign Up"
             android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.64"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
-            app:layout_constraintEnd_toEndOf="@+id/guideline_right"
             app:layout_constraintTop_toBottomOf="@+id/txt_confirm_password"/>
 
         <Button
@@ -192,12 +194,14 @@
             android:layout_width="328dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
             android:background="@drawable/bg_btn"
             android:text="Back to Login"
             android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+            app:layout_constraintHorizontal_bias="0.64"
             app:layout_constraintStart_toStartOf="@+id/guideline_left"
-            app:layout_constraintEnd_toEndOf="@+id/guideline_right"
             app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
 
         <android.support.constraint.Guideline

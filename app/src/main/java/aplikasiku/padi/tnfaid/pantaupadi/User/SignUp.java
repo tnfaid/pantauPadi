@@ -31,7 +31,7 @@ public class SignUp extends AppCompatActivity {
 
     ProgressDialog pDialog;
     Button btn_sign_up, btn_login;
-    EditText txt_firstName, txt_lastName, txt_email, txt_mobile, txt_country, txt_password, txt_confirm_password;
+    EditText txt_firstName, txt_lastName, txt_email,  txt_password, txt_confirm_password;
     Intent intent;
 
     int success;
@@ -67,8 +67,8 @@ public class SignUp extends AppCompatActivity {
         txt_firstName = (EditText) findViewById(R.id.txt_firstName);
         txt_lastName = (EditText) findViewById(R.id.txt_lastName);
         txt_email = (EditText) findViewById(R.id.txt_email);
-        txt_mobile = (EditText)findViewById(R.id.txt_mobile);
-        txt_country = (EditText)findViewById(R.id.txt_country);
+//        txt_mobile = (EditText)findViewById(R.id.txt_mobile);
+//        txt_country = (EditText)findViewById(R.id.txt_country);
         txt_password = (EditText) findViewById(R.id.txt_password);
         txt_confirm_password = (EditText) findViewById(R.id.txt_confirm_password);
 
@@ -91,15 +91,15 @@ public class SignUp extends AppCompatActivity {
                 String first_name = txt_firstName.getText().toString();
                 String last_name = txt_lastName.getText().toString();
                 String email = txt_email.getText().toString();
-                String mobile = txt_mobile.getText().toString();
-                String country = txt_country.getText().toString();
+//                String mobile = txt_mobile.getText().toString();
+//                String country = txt_country.getText().toString();
                 String password = txt_password.getText().toString();
                 String confirm_password = txt_confirm_password.getText().toString();
 
                 if (conMgr.getActiveNetworkInfo() != null
                         && conMgr.getActiveNetworkInfo().isAvailable()
                         && conMgr.getActiveNetworkInfo().isConnected()) {
-                    checkRegister(first_name,last_name, email, mobile, country, password, confirm_password);
+                    checkRegister(first_name,last_name, email, password, confirm_password);
                 } else {
                     Toast.makeText(getApplicationContext(), "No Internet Connection", Toast.LENGTH_SHORT).show();
                 }
@@ -108,7 +108,7 @@ public class SignUp extends AppCompatActivity {
 
     }
 
-    private void checkRegister(final String first_name, final String last_name, final String email, final String mobile, final String country, final String password, final String confirm_password) {
+    private void checkRegister(final String first_name, final String last_name, final String email, final String password, final String confirm_password) {
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
         pDialog.setMessage("Register ...");
@@ -136,8 +136,8 @@ public class SignUp extends AppCompatActivity {
                         txt_firstName.setText("");
                         txt_lastName.setText("");
                         txt_email.setText("");
-                        txt_mobile.setText("");
-                        txt_country.setText("");
+//                        txt_mobile.setText("");
+//                        txt_country.setText("");
                         txt_password.setText("");
                         txt_confirm_password.setText("");
 
@@ -172,8 +172,8 @@ public class SignUp extends AppCompatActivity {
                 params.put("first_name", first_name);
                 params.put("last_name", last_name);
                 params.put("email", email);
-                params.put("mobile", mobile);
-                params.put("country", country);
+//                params.put("mobile", mobile);
+//                params.put("country", country);
                 params.put("password", password);
                 params.put("confirm_password", confirm_password);
 
