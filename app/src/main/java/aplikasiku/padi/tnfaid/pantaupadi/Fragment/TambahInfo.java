@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import aplikasiku.padi.tnfaid.pantaupadi.R;
 
 
-public class tambahInfo extends Fragment {
+public class TambahInfo extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_tambah_info, container,false);

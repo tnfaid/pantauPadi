@@ -3,6 +3,8 @@ package aplikasiku.padi.tnfaid.pantaupadi.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.annotation.NonNull;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.TextView;
 
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
@@ -38,8 +41,6 @@ import aplikasiku.padi.tnfaid.pantaupadi.User.Login;
 public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCameraViewListener2,View.OnTouchListener {
     private static final String TAG = "CameraBlobActivity";
 
-
-
     private boolean mIsColorSelected = false;
     private Mat mRgba;
     private Scalar mBlobColorRgba;
@@ -50,8 +51,10 @@ public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCame
     private Scalar CONTOUR_COLOR;
 
     private CameraBridgeViewBase mOpenCvCameraView;
-
+    private Bitmap bitmap;
+    private TextView textView;
     Context mContext;
+
 
     //identifikasi kalo si openCV udah sukses diinstall
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(getContext()) {
@@ -182,6 +185,25 @@ public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCame
 
         touchedRegionRgba.release();
         touchedRegionHsv.release();
+
+//        get pixel color
+//        textView = (TextView)findByViewId(R.id.ambil_gambar);
+//        mIsColorSelected.setDrawingCacheEnable(true);
+//
+//        mIsColorSelected.buildDrawingCache(true);
+//
+//        if(event.getAction() == MotionEvent.ACTION_BUTTON_PRESS || event.getAction() == MotionEvent.ACTION_MOVE)
+//        {
+//            bitmap = mIsColorSelected.getDrawingCache();
+//            int pixel = bitmap.getPixel((int) event.getX(),(int) event.getY());
+//
+//            int r = Color.red(pixel);
+//            int g = Color.green(pixel);
+//            int b = Color.blue(pixel);
+//
+//            textView.setBackgroundColor(Color.rgb(r,g,b));
+//            textView.setText("R("+r+")\n"+"G("+g+")\n"+"B("+b+")");
+//        }
 
         return false; // don't need subsequent touch events
     }

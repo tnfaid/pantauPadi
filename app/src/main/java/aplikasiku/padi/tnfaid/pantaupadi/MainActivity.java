@@ -12,9 +12,9 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import aplikasiku.padi.tnfaid.pantaupadi.Fragment.AmbilGambar;
-import aplikasiku.padi.tnfaid.pantaupadi.Fragment.profil;
-import aplikasiku.padi.tnfaid.pantaupadi.Fragment.tambahInfo;
-import aplikasiku.padi.tnfaid.pantaupadi.Fragment.tentang;
+import aplikasiku.padi.tnfaid.pantaupadi.Fragment.Profil;
+import aplikasiku.padi.tnfaid.pantaupadi.Fragment.TambahInfo;
+import aplikasiku.padi.tnfaid.pantaupadi.Fragment.Tentang;
 
 public class MainActivity extends AppCompatActivity {
     private static final String  TAG              = "MainActivity";
@@ -48,13 +48,13 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new AmbilGambar();
                         break;
                     case R.id.tambah_info:
-                        fragment = new tambahInfo();
+                        fragment = new TambahInfo();
                         break;
                     case R.id.profil:
-                        fragment = new profil();
+                        fragment = new Profil();
                         break;
                     case R.id.tentang:
-                        fragment = new tentang();
+                        fragment = new Tentang();
                         break;
                 }
                 return getFragmentPage(fragment);

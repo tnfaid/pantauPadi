@@ -17,9 +17,8 @@ import java.util.zip.Inflater;
 
 import aplikasiku.padi.tnfaid.pantaupadi.R;
 import aplikasiku.padi.tnfaid.pantaupadi.User.Login;
-import aplikasiku.padi.tnfaid.pantaupadi.User.Profil;
 
-public class profil extends Fragment {
+public class Profil extends Fragment {
     Button btn_logout;
     String id, email;
     SharedPreferences sharedpreferences;
