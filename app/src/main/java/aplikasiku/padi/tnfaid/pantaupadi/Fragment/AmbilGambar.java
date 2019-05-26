@@ -94,6 +94,7 @@ public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCame
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
 
+
         return view;
     }
 
@@ -125,6 +126,7 @@ public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCame
             mOpenCvCameraView.disableView();
     }
 
+//    untuk view seperti list warna dan warna selected
     public void onCameraViewStarted(int width, int height) {
         mRgba = new Mat(height, width, CvType.CV_8UC4);
         mDetector = new ColorBlobDetector();
@@ -139,6 +141,7 @@ public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCame
         mRgba.release();
     }
 
+//    untuk area yang ter select ketika di touch
     public boolean onTouch(View v, MotionEvent event) {
         int cols = mRgba.cols();
         int rows = mRgba.rows();
@@ -187,7 +190,7 @@ public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCame
         touchedRegionHsv.release();
 
 //        get pixel color
-//        textView = (TextView)findByViewId(R.id.ambil_gambar);
+//        textView = (TextView)findByViewId(R.id.color_blob_detection_activity_surface_view);
 //        mIsColorSelected.setDrawingCacheEnable(true);
 //
 //        mIsColorSelected.buildDrawingCache(true);
@@ -208,23 +211,26 @@ public class AmbilGambar extends Fragment implements CameraBridgeViewBase.CvCame
         return false; // don't need subsequent touch events
     }
 
+// rotasi camera dan contouring color
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
         mRgba = inputFrame.rgba();
+        Mat mRgbaT = mRgba.t();
+        Core.flip(mRgba.t(), mRgbaT, 1);
+        Imgproc.resize(mRgbaT, mRgbaT, mRgba.size());
 
         if (mIsColorSelected) {
-            mDetector.process(mRgba);
+            mDetector.process(mRgbaT);
             List<MatOfPoint> contours = mDetector.getContours();
             Log.e(TAG, "Contours count: " + contours.size());
-            Imgproc.drawContours(mRgba, contours, -1, CONTOUR_COLOR);
+            Imgproc.drawContours(mRgbaT, contours, -1, CONTOUR_COLOR);
 
-            Mat colorLabel = mRgba.submat(4, 68, 4, 68);
+            Mat colorLabel = mRgbaT.submat(4, 68, 4, 68);
             colorLabel.setTo(mBlobColorRgba);
 
-            Mat spectrumLabel = mRgba.submat(4, 4 + mSpectrum.rows(), 70, 70 + mSpectrum.cols());
+            Mat spectrumLabel = mRgbaT.submat(4, 4 + mSpectrum.rows(), 70, 70 + mSpectrum.cols());
             mSpectrum.copyTo(spectrumLabel);
         }
-
-        return mRgba;
+        return mRgbaT;
     }
 
     private Scalar converScalarHsv2Rgba(Scalar hsvColor) {
