@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ps_bg_profil"
+    android:background="@drawable/ps_bg_profil2"
     tools:context=".Fragment.Profil">
 
     <!-- TODO: Update blank fragment layout -->
@@ -121,15 +121,18 @@
                 android:id="@+id/btn_logout"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:background="@drawable/circle"
                 android:text="EXIT"
                 android:textColor="@color/red"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.873"
-                tools:layout_editor_absoluteX="338dp" />
+                app:layout_constraintVertical_bias="0.873" />
 
         </android.support.constraint.ConstraintLayout>
     </RelativeLayout>
@@ -161,19 +164,132 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_width="424dp"
+        android:layout_height="665dp">
 
         <android.support.constraint.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="382dp"
+            android:layout_height="624dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background=""
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="45dp" />
 
-            />
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="45dp" />
+
+            <ImageView
+                android:id="@+id/iv_mail"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_email_black_24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+            <ImageView
+                android:id="@+id/iv_phone"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/ic_call_black_24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/iv_mail" />
+
+            <ImageView
+                android:id="@+id/iv_country"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/ic_flag_black_24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/iv_phone" />
+            <ImageView
+                android:id="@+id/iv_created"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="48dp"
+                android:background="@drawable/ic_access_time_black_24dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="@+id/iv_country" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="237dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="100dp"
+                android:text="amino@mail.com"
+                android:textSize="16dp"
+                android:textColor="@color/cleanMoreDark"
+                app:layout_constraintStart_toEndOf="@+id/iv_mail"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toTopOf="@+id/guideline8" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="237dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="8dp"
+                android:text="083042-029309-989"
+                android:textColor="@color/cleanMoreDark"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_email" />
+
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="237dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="8dp"
+                android:text="Indonesia"
+                android:textColor="@color/cleanMoreDark"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="237dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="8dp"
+                android:text="29 Mei 2019"
+                android:textColor="@color/cleanMoreDark"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toBottomOf="@+id/tv_country" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guidelinedata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="328dp" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="328dp" />
         </android.support.constraint.ConstraintLayout>
     </RelativeLayout>
 
