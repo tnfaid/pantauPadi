@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.widget.Button;
 
 import aplikasiku.padi.tnfaid.pantaupadi.Fragment.AmbilGambar;
+import aplikasiku.padi.tnfaid.pantaupadi.Fragment.AmbilGambarSetHsv;
 import aplikasiku.padi.tnfaid.pantaupadi.Fragment.Profil;
 import aplikasiku.padi.tnfaid.pantaupadi.Fragment.TambahInfo;
 import aplikasiku.padi.tnfaid.pantaupadi.Fragment.Tentang;
@@ -55,6 +56,9 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.tentang:
                         fragment = new Tentang();
+                        break;
+                    case R.id.ambil_gambar_set_hsv:
+                        fragment = new AmbilGambarSetHsv();
                         break;
                 }
                 return getFragmentPage(fragment);
